@@ -1,0 +1,175 @@
+:root {
+  --secondary-color: #fece0b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://images.pexels.com/photos/998635/pexels-photo-998635.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-size: cover;
+}
+
+.background {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 3rem 0;
+  color: white;
+  background-color: rgba(46, 46, 46, 0.703);
+  width: 60%;
+  padding: 2rem;
+  box-shadow: 0 3px 10px 0 rgb(30, 29, 29);
+}
+
+/* top buttons */
+.top-btns {
+  display: flex;
+  gap: 25px;
+  justify-content: end;
+  margin-bottom: 1rem;
+}
+
+.top-btns i {
+  font-size: 25px;
+}
+
+.background section {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 2rem;
+}
+
+.poster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.poster__image {
+  width: 200px;
+  height: 280px;
+  background-image: url("https://writingishardwork.files.wordpress.com/2016/04/dune.jpg");
+  background-size: cover;
+}
+
+.poster__ratings i {
+  color: #faf06d;
+  filter: drop-shadow(1px 1px 3px var(--secondary-color));
+}
+
+
+/* summary */
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  color: var(--secondary-color);
+  font-size: 3rem;
+  margin-top: -15px;
+
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  margin-top: -15px;
+}
+
+h2 span {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.summary__notes {
+  font-size: 0.9rem;
+}
+
+button {
+  color: #f7610d;
+  border: 2px solid #f7610d;
+  background-color: #38322b;
+  width: fit-content;
+  padding: 0.6rem 1.7rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #f7610d;
+  color: white;
+}
+
+/* table */
+table {
+  margin: 2rem 0;
+  border-collapse: collapse;
+  padding: 1rem 0.2rem;
+}
+
+td {
+  border-bottom: 3px solid #a69988;
+  padding: 0.5rem 0.2rem;
+  line-height: 2;
+  vertical-align: top;
+}
+
+td:not(.credit) {
+  padding-left: 20px;
+}
+
+.credit {
+  width: 200px;
+  text-align: right;
+  padding-right: 20px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  border-right: 3px solid #a69988;
+}
+
+.last-row td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .background section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .summary__notes,
+  button {
+    margin: 0 auto;
+  }
+}
